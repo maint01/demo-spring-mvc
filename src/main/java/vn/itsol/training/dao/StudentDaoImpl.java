@@ -30,7 +30,7 @@ public class StudentDaoImpl implements StudentDao {
 
   @Override
   public StudentDto findById(String id) {
-    String sql = "Select * From student WHERE id = :p_id";
+    String sql = "Select id, name, address, phone, email From student WHERE id = :p_id";
     Map<String, String> params = new HashMap<>();
     params.put("p_id", id);
     return namedParameterJdbcTemplate.queryForObject(sql, params, new BeanPropertyRowMapper<>(StudentDto.class));

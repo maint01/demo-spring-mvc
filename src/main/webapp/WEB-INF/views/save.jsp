@@ -8,7 +8,7 @@
 <body>
 <div>
   <h1>Them moi sinh vien</h1>
-  <form:form modelAttribute="student" method="post" action="/save">
+  <form:form modelAttribute="student" method="post" action="/new">
     <table>
       <tbody>
       <tr>

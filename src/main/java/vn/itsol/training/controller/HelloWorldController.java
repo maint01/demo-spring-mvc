@@ -39,27 +39,27 @@ public class HelloWorldController {
         return "language";
     }
 
-    @RequestMapping(value = "/student")
+    @GetMapping(value = "/student")
     public String findAll(Model model) {
       List<StudentDto> list = studentService.findAll();
         model.addAttribute("listData", list);
         return "student";
     }
 
-    @RequestMapping(value = "/student/{id}/detail")
+    @GetMapping("/student/{id}/detail")
     public String findById(@PathVariable("id") String id, Model model) {
       StudentDto data = studentService.findById(id);
         model.addAttribute("data", data);
         return "detail";
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.GET)
+    @GetMapping("/new")
     public String saveInit(Model model) {
       model.addAttribute("student", new StudentDto());
         return "save";
     }
 
-  @RequestMapping(value = "/save", method = RequestMethod.POST)
+  @PostMapping("/new")
   public String saveDo(@ModelAttribute("student") StudentDto dto) {
     studentService.save(dto);
     return "redirect:/student";

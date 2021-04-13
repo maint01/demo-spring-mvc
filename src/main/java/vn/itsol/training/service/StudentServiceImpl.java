@@ -58,7 +58,7 @@ public class StudentServiceImpl implements StudentService {
   public void save(StudentDto studentInformationDto) {
     Student student = new Student();
 
-    student.setName(studentInformationDto.getName());
+    student.setTen(studentInformationDto.getName());
     student.setPhone(studentInformationDto.getPhone());
     student.setAddress(studentInformationDto.getAddress());
     student.setEmail(studentInformationDto.getEmail());

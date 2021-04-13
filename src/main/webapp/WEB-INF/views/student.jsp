@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-  <a href="/save">SAVE</a>
+  <a href="/new">SAVE</a>
 </div>
 <table>
   <thead>
@@ -23,7 +23,7 @@
   <c:forEach var="item" items="${listData}">
     <tr>
       <td>${item.id}</td>
-      <td>${item.name}</td>
+      <td>${item.ten}</td>
       <td>${item.phone}</td>
       <td>${item.address}</td>
       <td>${item.email}</td>
